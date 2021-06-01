@@ -9,13 +9,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <button class="nav-item" routerLink="/" type="button">
-          <h5 class="nav-link">Inicio</h5>
+          <h4 class="nav-link">Inicio</h4>
         </button>
         <button class="nav-item" routerLink="/paises" type="button">
-          <h5 class="nav-link">Listado de paises</h5>
+          <h4 class="nav-link">Listado de paises</h4>
         </button>
         <button class="nav-item dropdown" type="button">
-          <h5
+          <h4
             class="nav-link dropdown-toggle"
             id="navbarDropdown"
             role="button"
@@ -23,7 +23,7 @@
             aria-expanded="false"
           >
             Listado de paises por filtrados
-          </h5>
+          </h4>
           <ul
             class="dropdown-menu bg-dark text-white"
             aria-labelledby="navbarDropdown"
@@ -36,15 +36,9 @@
           </ul>
         </button>
       </ul>
-      <form class="d-flex">
-        <input
-          class="form-control"
-          type="search"
-          placeholder="Buscar país"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-warning" type="submit">Buscar</button>
-      </form>
+      <div align="right" class="col-sm-4">
+        <app-buscador class="btn-block"></app-buscador>
+      </div>
     </div>
   </div>
 </nav>
