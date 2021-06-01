@@ -1,8 +1,17 @@
 <button class="btn btn-dark btn-block">
   <b>Listado de TODOS los paises ({{ paises.length }})</b>
 </button>
+<app-buscador
+  (buscador)="handleSearch($event)"
+>
+
+</app-buscador>
+
 <div class="form-group row">
-  <div class="col-sm-3 d-flex align-items-stretch" *ngFor="let pais of paises">
+  <div
+    class="col-sm-3 d-flex align-items-stretch"
+    *ngFor="let pais of paises | buscador: filtroValor"
+  >
     <div class="card bg-dark text-white">
       <img
         class="card-img-top h-100"

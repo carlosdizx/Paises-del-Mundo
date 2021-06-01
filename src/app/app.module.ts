@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PaisesComponent } from './componentes/paises/paises.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HeaderComponent } from './componentes/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PaisesService } from './componentes/paises/paises.service';
@@ -13,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BuscadorComponent } from './componentes/paises/filtros/buscador/buscador.component';
+import { BuscadorPipe } from './componentes/paises/filtros/buscador/buscador.pipe';
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -27,6 +29,7 @@ const routes: Routes = [
     RegionesComponent,
     RegionesComponent,
     BuscadorComponent,
+    BuscadorPipe,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,8 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [PaisesService],
   bootstrap: [AppComponent],
