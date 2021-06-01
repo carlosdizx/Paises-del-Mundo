@@ -19,7 +19,7 @@ import { BuscadorPipe } from './componentes/paises/filtros/buscador/buscador.pip
 import { BioComponent } from './componentes/bio/bio.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/bio', pathMatch: 'full' },
+  { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'bio', component: BioComponent },
   { path: 'paises', component: PaisesComponent },
   { path: 'paises/filtrado/regiones/:id', component: RegionesComponent },
