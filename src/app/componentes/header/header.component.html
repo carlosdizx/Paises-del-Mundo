@@ -8,22 +8,25 @@
     />
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <button class="nav-item" routerLink="/" type="button">
-          <h4 class="nav-link">Inicio</h4>
+        <button routerLink="/" class="btn mr-5">
+          <h2 class="btn nav-link" type="button">Inicio</h2>
         </button>
-        <button class="nav-item" routerLink="/paises" type="button">
-          <h4 class="nav-link">Listado de paises</h4>
+        <button routerLink="/paises" class="btn mr-5">
+          <h2 class="btn nav-link" type="button">
+            Listado de<br />
+            paises
+          </h2>
         </button>
-        <button class="nav-item dropdown" type="button">
-          <h4
-            class="nav-link dropdown-toggle"
+        <button class="btn dropdown" type="button">
+          <h2
+            class="nav-link btn-outline-secondary dropdown-toggle"
             id="navbarDropdown"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Listado de paises por filtrados
-          </h4>
+            Listado de paises<br />por filtrados
+          </h2>
           <ul
             class="dropdown-menu bg-dark text-white"
             aria-labelledby="navbarDropdown"
@@ -32,7 +35,9 @@
               <a class="dropdown-item bg-dark active">Por Regiones</a>
             </li>
             <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item bg-dark">... Proximanente otros!</a></li>
+            <li>
+              <a class="dropdown-item bg-dark">... Proximanente otros!</a>
+            </li>
           </ul>
         </button>
       </ul>
