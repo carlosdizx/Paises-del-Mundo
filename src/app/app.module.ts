@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { BuscadorComponent } from './componentes/paises/filtros/buscador/buscador.component';
 import { BuscadorPipe } from './componentes/paises/filtros/buscador/buscador.pipe';
 import { BioComponent } from './componentes/bio/bio.component';
+import { FooterComponent } from './componentes/footer/footer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -34,6 +35,7 @@ const routes: Routes = [
     BuscadorComponent,
     BuscadorPipe,
     BioComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
