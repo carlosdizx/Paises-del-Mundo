@@ -6,8 +6,8 @@
       <div class="card-body">
         <h5>Capital: {{pais.capital}}</h5>
         <h5>Area: {{pais.area}}</h5>
-        <h5>Poblacion{{pais.population}}</h5>
-        <h6>Lenguas/Lenguajes/Idiomas:</h6>
+        <h5>Poblacion: {{pais.population}}</h5>
+        <h6>Lenguas:</h6>
         <ol>
           <li *ngFor="let lenguaje of pais.languages">{{lenguaje.name}}</li>
         </ol>
