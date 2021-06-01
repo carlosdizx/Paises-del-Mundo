@@ -7,18 +7,21 @@ import { HeaderComponent } from './componentes/header/header.component';
 import {HttpClientModule} from '@angular/common/http';
 import {PaisesService} from './componentes/paises/paises.service';
 import {RouterModule, Routes} from '@angular/router';
+import { RegionesComponent } from './componentes/paises/filtros/regiones/regiones.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'paises', component: PaisesComponent },
+  { path: 'paises/:id', component: RegionesComponent },
 ];
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PaisesComponent,
-  ],
+,
+RegionesComponent  ],
   imports: [
     BrowserModule,
     HttpClientModule,
