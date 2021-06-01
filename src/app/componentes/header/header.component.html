@@ -1,35 +1,40 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
   <div class="container-fluid">
-    <img class="img-fluid mr-5" src="assets/imagenes/logoArenaCenter.png" width="134" height="153">
+    <img
+      class="img-fluid mr-5"
+      src="assets/imagenes/logoArenaCenter.png"
+      width="134"
+      height="153"
+    />
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item" type="button">
-          <h4 class="nav-link" routerLink="/">Inicio</h4>
-        </li>
-        <li class="nav-item" type="button">
-          <h4 class="nav-link" routerLink="/paises">Listado de paises</h4>
-        </li>
-        <li class="nav-item dropdown" type="button">
-          <h4
+        <button class="nav-item" routerLink="/" type="button">
+          <h5 class="nav-link">Inicio</h5>
+        </button>
+        <button class="nav-item" routerLink="/paises" type="button">
+          <h5 class="nav-link">Listado de paises</h5>
+        </button>
+        <button class="nav-item dropdown" type="button">
+          <h5
             class="nav-link dropdown-toggle"
             id="navbarDropdown"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Filtrado
-          </h4>
-          <ul class="dropdown-menu bg-dark text-white" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item bg-dark" [routerLink]="['/paises/',1]">Africa</a></li>
-            <li><a class="dropdown-item bg-dark" [routerLink]="['/paises/',2]">Americas</a></li>
-            <li><a class="dropdown-item bg-dark" [routerLink]="['/paises/',3]">Asia</a></li>
-            <li><a class="dropdown-item bg-dark" [routerLink]="['/paises/',4]">Europa</a></li>
-            <li><a class="dropdown-item bg-dark" [routerLink]="['/paises/',5]">Oceania</a></li>
-            <li><a class="dropdown-item bg-dark"></a></li>
+            Listado de paises por filtrados
+          </h5>
+          <ul
+            class="dropdown-menu bg-dark text-white"
+            aria-labelledby="navbarDropdown"
+          >
+            <li [routerLink]="['/paises/filtrado/regiones/', 1]">
+              <a class="dropdown-item bg-dark active">Por Regiones</a>
+            </li>
             <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item bg-dark" [routerLink]="['/paises/',6]">Polar</a></li>
+            <li><a class="dropdown-item bg-dark">xd</a></li>
           </ul>
-        </li>
+        </button>
       </ul>
       <form class="d-flex">
         <input

@@ -1,0 +1,243 @@
+<button class="btn btn-dark btn-block">
+  <b>{{ titulo }}</b>
+</button>
+<div class="form-group row">
+  <div class="col-sm-2">
+    <button
+      class="btn btn-secondary btn-block"
+      [routerLink]="['/paises/filtrado/regiones/', 1]"
+      (click)="cambiarIndice(1)"
+    >
+      Africa ({{
+        paises.length !== 0 ? (africanos.length / paises.length) * 100 : ""
+      }}%)
+    </button>
+  </div>
+  <div class="col-sm-2">
+    <button
+      class="btn btn-danger btn-block"
+      [routerLink]="['/paises/filtrado/regiones/', 2]"
+      (click)="cambiarIndice(2)"
+    >
+      Americas ({{
+        paises.length !== 0 ? (americanos.length / paises.length) * 100 : ""
+      }}%)
+    </button>
+  </div>
+  <div class="col-sm-2">
+    <button
+      class="btn btn-warning btn-block"
+      [routerLink]="['/paises/filtrado/regiones/', 3]"
+      (click)="cambiarIndice(3)"
+    >
+      Asia ({{
+        paises.length !== 0 ? (asiticos.length / paises.length) * 100 : ""
+      }}%)
+    </button>
+  </div>
+  <div class="col-sm-2">
+    <button
+      class="btn btn-light btn-block"
+      [routerLink]="['/paises/filtrado/regiones/', 4]"
+      (click)="cambiarIndice(4)"
+    >
+      Europa ({{
+        paises.length !== 0 ? (europeos.length / paises.length) * 100 : ""
+      }}%)
+    </button>
+  </div>
+  <div class="col-sm-2">
+    <button
+      class="btn btn-primary btn-block"
+      [routerLink]="['/paises/filtrado/regiones/', 5]"
+      (click)="cambiarIndice(5)"
+    >
+      Oceania ({{
+        paises.length !== 0 ? (oceanicos.length / paises.length) * 100 : ""
+      }}%)
+    </button>
+  </div>
+  <div class="col-sm-2">
+    <button
+      class="btn btn-success btn-block"
+      [routerLink]="['/paises/filtrado/regiones/', 6]"
+      (click)="cambiarIndice(6)"
+    >
+      Otros ({{
+        paises.length !== 0 ? (otros.length / paises.length) * 100 : ""
+      }}%)
+    </button>
+  </div>
+</div>
+<!-- Aqui se cargan las tarjetas de los paises -->
+<!-- Africa -->
+<div *ngIf="indice === 1" class="form-group row">
+  <div
+    class="col-sm-3 d-flex align-items-stretch"
+    *ngFor="let africano of africanos"
+  >
+    <div class="card bg-dark text-white">
+      <img
+        class="card-img-top h-100"
+        src="{{ africano.flag }}"
+        alt="{{ africano.name }}"
+      />
+      <div class="card-header">
+        <h3>{{ africano.name }}</h3>
+      </div>
+      <div class="card-body">
+        <h5>Capital: {{ africano.capital }}</h5>
+        <h5>Area: {{ africano.area }}</h5>
+        <h5>Poblacion: {{ africano.population }}</h5>
+        <h6>Lenguas:</h6>
+        <ol>
+          <li *ngFor="let lenguaje of africano.languages">
+            {{ lenguaje.name }}
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Americas -->
+<div *ngIf="indice === 2" class="form-group row">
+  <div
+    class="col-sm-3 d-flex align-items-stretch"
+    *ngFor="let americano of americanos"
+  >
+    <div class="card bg-dark text-white">
+      <img
+        class="card-img-top h-100"
+        src="{{ americano.flag }}"
+        alt="{{ americano.name }}"
+      />
+      <div class="card-header">
+        <h3>{{ americano.name }}</h3>
+      </div>
+      <div class="card-body">
+        <h5>Capital: {{ americano.capital }}</h5>
+        <h5>Area: {{ americano.area }}</h5>
+        <h5>Poblacion: {{ americano.population }}</h5>
+        <h6>Lenguas:</h6>
+        <ol>
+          <li *ngFor="let lenguaje of americano.languages">
+            {{ lenguaje.name }}
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Asia -->
+<div *ngIf="indice === 3" class="form-group row">
+  <div
+    class="col-sm-3 d-flex align-items-stretch"
+    *ngFor="let asiaticos of asiticos"
+  >
+    <div class="card bg-dark text-white">
+      <img
+        class="card-img-top h-100"
+        src="{{ asiaticos.flag }}"
+        alt="{{ asiaticos.name }}"
+      />
+      <div class="card-header">
+        <h3>{{ asiaticos.name }}</h3>
+      </div>
+      <div class="card-body">
+        <h5>Capital: {{ asiaticos.capital }}</h5>
+        <h5>Area: {{ asiaticos.area }}</h5>
+        <h5>Poblacion: {{ asiaticos.population }}</h5>
+        <h6>Lenguas:</h6>
+        <ol>
+          <li *ngFor="let lenguaje of asiaticos.languages">
+            {{ lenguaje.name }}
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Europa -->
+<div *ngIf="indice === 4" class="form-group row">
+  <div
+    class="col-sm-3 d-flex align-items-stretch"
+    *ngFor="let europeo of europeos"
+  >
+    <div class="card bg-dark text-white">
+      <img
+        class="card-img-top h-100"
+        src="{{ europeo.flag }}"
+        alt="{{ europeo.name }}"
+      />
+      <div class="card-header">
+        <h3>{{ europeo.name }}</h3>
+      </div>
+      <div class="card-body">
+        <h5>Capital: {{ europeo.capital }}</h5>
+        <h5>Area: {{ europeo.area }}</h5>
+        <h5>Poblacion: {{ europeo.population }}</h5>
+        <h6>Lenguas:</h6>
+        <ol>
+          <li *ngFor="let lenguaje of europeo.languages">
+            {{ lenguaje.name }}
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Oceania -->
+<div *ngIf="indice === 5" class="form-group row">
+  <div
+    class="col-sm-3 d-flex align-items-stretch"
+    *ngFor="let oceanico of oceanicos"
+  >
+    <div class="card bg-dark text-white">
+      <img
+        class="card-img-top h-100"
+        src="{{ oceanico.flag }}"
+        alt="{{ oceanico.name }}"
+      />
+      <div class="card-header">
+        <h3>{{ oceanico.name }}</h3>
+      </div>
+      <div class="card-body">
+        <h5>Capital: {{ oceanico.capital }}</h5>
+        <h5>Area: {{ oceanico.area }}</h5>
+        <h5>Poblacion: {{ oceanico.population }}</h5>
+        <h6>Lenguas:</h6>
+        <ol>
+          <li *ngFor="let lenguaje of oceanico.languages">
+            {{ lenguaje.name }}
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Polares -->
+<div *ngIf="indice === 6" class="form-group row">
+  <div class="col-sm-3 d-flex align-items-stretch" *ngFor="let polar of otros">
+    <div class="card bg-dark text-white">
+      <img
+        class="card-img-top h-100"
+        src="{{ polar.flag }}"
+        alt="{{ polar.name }}"
+      />
+      <div class="card-header">
+        <h3>{{ polar.name }}</h3>
+      </div>
+      <div class="card-body">
+        <h5>Capital: {{ polar.capital }}</h5>
+        <h5>Area: {{ polar.area }}</h5>
+        <h5>Poblacion: {{ polar.population }}</h5>
+        <h6>Lenguas:</h6>
+        <ol>
+          <li *ngFor="let lenguaje of polar.languages">
+            {{ lenguaje.name }}
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>

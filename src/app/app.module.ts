@@ -13,13 +13,14 @@ import { RegionesComponent } from './componentes/paises/filtros/regiones/regione
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'paises', component: PaisesComponent },
-  { path: 'paises/:id', component: RegionesComponent },
+  { path: 'paises/filtrado/regiones/:id', component: RegionesComponent },
 ];
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PaisesComponent,
+    RegionesComponent
 ,
 RegionesComponent  ],
   imports: [
