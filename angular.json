@@ -24,9 +24,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css","src/assets/css/bootstrap.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap.css"
             ],
-            "scripts": ["src/assets/js/bootstrap.min.js"]
+            "scripts": [
+              "src/assets/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -120,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "PaisesDelMundo"
+  "defaultProject": "PaisesDelMundo",
+  "cli": {
+    "analytics": "3cecb9f6-5825-4bca-aa40-7b9cab761279"
+  }
 }

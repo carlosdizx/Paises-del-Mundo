@@ -1,0 +1,8 @@
+.dropdown-item{
+  border-radius: 15px;
+}
+.nav-item{
+  border-radius: 15px;
+  background-color: peru;
+  margin: 10px;
+}
